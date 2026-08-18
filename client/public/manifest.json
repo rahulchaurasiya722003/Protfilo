@@ -1,0 +1,21 @@
+{
+  "name": "Aai",
+  "short_name": "Aai",
+  "description": "Aai",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#23262B",
+  "theme_color": "#16A34A",
+  "icons": [
+    {
+      "src": "/logo-f-192x192.svg",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-f-512x512.svg",
+      "sizes": "512x512",
+      "purpose": "maskable any"
+    }
+  ]
+}
