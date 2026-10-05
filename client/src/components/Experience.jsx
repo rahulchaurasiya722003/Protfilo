@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin, CheckCircle2, ShieldCheck, Users, Globe } from "lucide-react";
 import { experienceData } from "@/data/portfolioData";
 
+const achievementIconMap = { Globe, ShieldCheck, Users };
+
 export default function Experience() {
   return (
     <section id="experience" className="py-20 relative overflow-hidden">
@@ -80,29 +82,19 @@ export default function Experience() {
 
               {/* Achievement Highlights Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800/80">
-                <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
-                  <Globe className="w-5 h-5 text-blue-400 shrink-0" />
-                  <div>
-                    <p className="text-xs text-slate-400 font-mono">Production Websites</p>
-                    <p className="text-sm font-bold text-white">3+ Live Apps</p>
-                  </div>
-                </div>
-
-                <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
-                  <ShieldCheck className="w-5 h-5 text-purple-400 shrink-0" />
-                  <div>
-                    <p className="text-xs text-slate-400 font-mono">Rentoo Platform</p>
-                    <p className="text-sm font-bold text-white">MERN Architecture</p>
-                  </div>
-                </div>
-
-                <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
-                  <Users className="w-5 h-5 text-cyan-400 shrink-0" />
-                  <div>
-                    <p className="text-xs text-slate-400 font-mono">Leadership</p>
-                    <p className="text-sm font-bold text-white">300+ Team Members</p>
-                  </div>
-                </div>
+                {exp.achievements.map((ach, aIdx) => {
+                  const AchIcon = achievementIconMap[ach.icon] || Globe;
+                  const iconColors = ["text-blue-400", "text-purple-400", "text-cyan-400"];
+                  return (
+                    <div key={aIdx} className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                      <AchIcon className={`w-5 h-5 ${iconColors[aIdx % iconColors.length]} shrink-0`} />
+                      <div>
+                        <p className="text-xs text-slate-400 font-mono">{ach.label}</p>
+                        <p className="text-sm font-bold text-white">{ach.value}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
 
             </motion.div>

@@ -88,7 +88,7 @@ export default function Hero() {
 
             {/* Short Introduction */}
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-              Experienced Full Stack Developer specializing in building high-performance MERN stack web applications, AI-powered systems like <span className="text-cyan-400 font-medium">AI Study Assistant</span> &amp; <span className="text-purple-400 font-medium">AI Resume Analyzer</span>, and scalable peer-to-peer platforms (<span className="text-blue-400 font-medium">Rentoo</span>).
+              Full Stack Developer building high-performance MERN stack applications — contributor to MCM live production projects <span className="text-blue-400 font-medium">Float Chat</span> &amp; <span className="text-cyan-400 font-medium">Unified MCM Portal</span>, and creator of AI-powered systems like <span className="text-purple-400 font-medium">AI Study Assistant</span> &amp; <span className="text-cyan-400 font-medium">AI Resume Analyzer</span>.
             </p>
 
             {/* Highlights Grid Pills */}
@@ -179,8 +179,8 @@ export default function Hero() {
                   <Image
                     src={personalDetails.photo}
                     alt={personalDetails.name}
-                    width={400}
-                    height={400}
+                    width={500}
+                    height={500}
                     priority
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />

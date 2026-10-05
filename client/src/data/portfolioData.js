@@ -8,15 +8,15 @@ export const personalDetails = {
   college: "Prahladrai Dalmia Lions College of Commerce & Economics, Mumbai",
   linkedin: "https://www.linkedin.com/in/rahul-chaurasiya48290b281",
   github: "https://github.com/rahulchaurasiya-dev",
-  photo: "/images/rahul-chaurasiya.jpg",
+  photo: "/images/rahul-chaurasiya.png",
   logo: "/images/logo.png",
   resumePdf: "/docs/Rahul_Chaurasiya_Resume.pdf",
   summary:
-    "Full Stack Developer with hands-on experience in React.js, Node.js, Express.js, and MongoDB (MERN Stack). Delivered responsive, cross-browser-compatible interfaces for 3+ real-time production websites during a 6-month internship. Architected Rentoo — a peer-to-peer vehicle rental platform with RESTful APIs, JWT authentication, and end-to-end full stack implementation. Proven leader with experience coordinating 300+ member teams.",
+    "Full Stack Developer with hands-on experience in React.js, Node.js, Express.js, and MongoDB (MERN Stack). Contributed to MCM live production projects — Float Chat (automation workflows with React/TanStack, Redis, Docker) and the Unified MCM Portal (React-based Admin Panel). Built AI-powered full stack applications, including an AI Study Assistant using the OpenAI API and an AI Resume Analyzer, featuring PDF upload, text extraction, and responsive user interfaces.",
   highlights: [
-    { number: "6+", label: "Months Internship Experience" },
-    { number: "3+", label: "Production Websites Delivered" },
-    { number: "300+", label: "Team Members Coordinated" },
+    { number: "2", label: "MCM Live Production Projects" },
+    { number: "2+", label: "AI-Powered Applications Built" },
+    { number: "5+", label: "Full Stack Projects Delivered" },
     { number: "100%", label: "MERN & RESTful Stack Mastery" },
   ],
 };
@@ -28,6 +28,7 @@ export const skillsData = {
     { name: "HTML5 & CSS3", level: 95, icon: "Layout" },
     { name: "React Hooks & Context", level: 90, icon: "Cpu" },
     { name: "React Router", level: 88, icon: "Network" },
+    { name: "TanStack (Query / Table)", level: 85, icon: "Boxes" },
     { name: "Responsive Web Design", level: 95, icon: "Smartphone" },
     { name: "Cross-browser Compatibility", level: 90, icon: "Globe" },
   ],
@@ -41,12 +42,15 @@ export const skillsData = {
   ],
   databases: [
     { name: "MongoDB (NoSQL)", level: 90, icon: "Database" },
+    { name: "Redis (Caching)", level: 80, icon: "Zap" },
     { name: "MongoDB Schema Design", level: 88, icon: "TableProperties" },
     { name: "MySQL", level: 82, icon: "DatabaseBackup" },
     { name: "SQL Queries", level: 85, icon: "Binary" },
   ],
   tools: [
     { name: "Git & GitHub", level: 92, icon: "GitBranch" },
+    { name: "Docker", level: 80, icon: "Boxes" },
+    { name: "Ubuntu / Linux", level: 78, icon: "Terminal" },
     { name: "Visual Studio Code", level: 95, icon: "Terminal" },
     { name: "Postman", level: 90, icon: "Send" },
     { name: "Agile / Scrum", level: 85, icon: "Users" },
@@ -56,6 +60,40 @@ export const skillsData = {
 };
 
 export const projectsData = [
+  {
+    id: "float-chat",
+    title: "Float Chat",
+    category: "MCM Live Projects",
+    date: "2025 – Present",
+    description:
+      "A live production chat and automation platform. Worked on the Automation module, building and improving automation workflows and features end to end.",
+    features: [
+      "Developed and enhanced React/TanStack components and integrated backend REST APIs.",
+      "Built and improved automation workflows and features for the Automation module.",
+      "Worked with Redis, Docker, and Ubuntu for application development and workflow management.",
+      "Performed functional, integration, and UI testing to identify and resolve issues.",
+    ],
+    techStack: ["React.js", "TanStack", "Redis", "Docker", "Ubuntu", "REST APIs", "AI/Automation"],
+    featured: true,
+    imageBg: "from-cyan-600/30 via-teal-600/30 to-blue-600/30",
+  },
+  {
+    id: "unified-mcm-portal",
+    title: "Unified MCM Portal",
+    category: "MCM Live Projects",
+    date: "2025 – Present",
+    description:
+      "A live production management portal. Developed and enhanced the React-based Admin Panel and core management modules with dynamic UI components.",
+    features: [
+      "Developed and enhanced React-based Admin Panel and management modules.",
+      "Built core application modules with dynamic UI components and seamless user interactions.",
+      "Improved responsive design, UI consistency, and overall application usability.",
+      "Performed functional testing, bug fixing, and UI optimization across the platform.",
+    ],
+    techStack: ["React.js", "JavaScript", "REST APIs", "Docker", "Git/GitHub"],
+    featured: true,
+    imageBg: "from-indigo-600/30 via-blue-600/30 to-purple-600/30",
+  },
   {
     id: "cold-email-generator",
     title: "B2B Cold Email Generator",
@@ -91,7 +129,7 @@ export const projectsData = [
     ],
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "OpenAI API", "PDF Parsing"],
     githubUrl: "https://github.com/rahulchaurasiya-dev/ai-study-assistant",
-    liveUrl: "https://ai-study-assistant-demo.vercel.app",
+    liveUrl: "/ai-study-assistant",
     featured: true,
     imageBg: "from-blue-600/30 via-indigo-600/30 to-purple-600/30",
   },
@@ -110,48 +148,30 @@ export const projectsData = [
     ],
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "OpenAI API", "ATS Engine"],
     githubUrl: "https://github.com/rahulchaurasiya-dev/ai-resume-analyzer",
-    liveUrl: "https://ai-resume-analyzer-demo.vercel.app",
+    liveUrl: "/ai-resume-analyzer",
     featured: true,
     imageBg: "from-purple-600/30 via-cyan-600/30 to-blue-600/30",
-  },
-  {
-    id: "rentoo-vehicle-rental",
-    title: "Rentoo — Vehicle Rental Platform",
-    category: "MERN Stack",
-    date: "2025 – 2026",
-    description:
-      "A feature-rich peer-to-peer vehicle rental marketplace connecting vehicle owners directly with renters with seamless booking workflows.",
-    features: [
-      "Architected complete peer-to-peer rental ecosystem from ground up using MERN Stack.",
-      "Designed RESTful APIs for vehicle listings, user profiles, booking management, and pricing.",
-      "Implemented secure JWT (JSON Web Token) authentication and session authorization.",
-      "Engineered flexible MongoDB schemas to handle vehicle inventory and booking states.",
-    ],
-    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Auth", "REST API"],
-    githubUrl: "https://github.com/rahulchaurasiya-dev/rentoo-platform",
-    liveUrl: "https://rentoo-vehicle-demo.vercel.app",
-    featured: true,
-    imageBg: "from-cyan-600/30 via-blue-600/30 to-indigo-600/30",
   },
 ];
 
 export const experienceData = [
   {
-    role: "Full Stack Developer Intern",
-    type: "6-Month Internship",
-    company: "Real-time Production Environment",
+    role: "Full Stack Developer",
+    type: "MCM Live Projects",
+    company: "MCM — Live Production Environment",
     location: "Mumbai, India",
-    period: "2025 - 2026 (6 Months)",
+    period: "2025 – Present",
     responsibilities: [
-      "Delivered responsive, cross-browser-compatible user interfaces for 3+ real-time production websites.",
-      "Architected Rentoo — a peer-to-peer vehicle rental platform with custom RESTful APIs and JWT authentication.",
-      "Collaborated across design, backend, and testing teams using Git & GitHub version control.",
-      "Demonstrated proven leadership by coordinating and guiding 300+ member teams across technical and organizational initiatives.",
+      "Worked on the Float Chat Automation module — developing and improving automation workflows and features.",
+      "Developed and enhanced React/TanStack components and integrated backend REST APIs.",
+      "Built and enhanced the React-based Admin Panel and management modules of the Unified MCM Portal.",
+      "Worked with Redis, Docker, and Ubuntu for application development and workflow management.",
+      "Performed functional, integration, and UI testing; improved responsive design and UI consistency across platforms.",
     ],
     achievements: [
-      "Built 3+ live production web applications",
-      "Architected end-to-end Rentoo P2P rental platform",
-      "Coordinated and led 300+ team members",
+      { icon: "Globe", label: "Live Production Apps", value: "Float Chat & MCM Portal" },
+      { icon: "ShieldCheck", label: "Automation Module", value: "Workflows & Features" },
+      { icon: "Users", label: "DevOps Exposure", value: "Redis · Docker · Ubuntu" },
     ],
   },
 ];
